@@ -20,11 +20,12 @@ const options = {
 		warnings: false,
 		errors: true
 	},
+
 	// Show errors and warnings in console
-	quiet: false,	// TODO: check other params
+	quiet: false,
 
 	// Hide the build info
-	noInfo: false,	// TODO: check other params
+	noInfo: false,
 
 	// Tell the server where to serve static files from.
 	// Set this is the `paths.js` file.

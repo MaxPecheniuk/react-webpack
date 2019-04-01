@@ -23,18 +23,7 @@ module.exports = merge(common, {
 		path: paths.appBuild,
 		publicPath: "/"
 	},
-	plugins: [
-		// Uglify to minify your JavaScript
-		new UglifyJSPlugin(),
-		// Set process.env.NODE_ENV to production
-		new webpack.DefinePlugin({
-			"process.env": {
-				NODE_ENV: JSON.stringify("production")
-			}
-		}),
-		// Extract text/(s)css from a bundle, or bundles, into a separate file.
-		new ExtractTextPlugin("styles.css")
-	],
+
 	module: {
 		rules: [
 			{
@@ -75,5 +64,17 @@ module.exports = merge(common, {
 				})
 			}
 		]
-	}
+	},
+	plugins: [
+		// Uglify to minify your JavaScript
+		new UglifyJSPlugin(),
+		// Set process.env.NODE_ENV to production
+		new webpack.DefinePlugin({
+			"process.env": {
+				NODE_ENV: JSON.stringify("production")
+			}
+		}),
+		// Extract text/(s)css from a bundle, or bundles, into a separate file.
+		new ExtractTextPlugin("styles.css")
+	]
 });

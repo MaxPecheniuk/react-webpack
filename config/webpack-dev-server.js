@@ -6,7 +6,7 @@ const paths = require("./paths");
 const config = require("./webpack-dev-config.js");
 
 // Change port to suit your preference
-const Port = 3000;
+const Port = 8080;
 const Host = "localhost";
 
 const options = {
@@ -14,8 +14,9 @@ const options = {
 	// Enable webpack's Hot Module Replacement feature
 	// hot: true,
 	// full-screen overlay in the browser for compiler errors or warnings
-	port: 3000,
-	host: "localhost",
+	//TODO: port http, https
+	port: Port,
+	host: Host,
 	overlay: {
 		warnings: false,
 		errors: true

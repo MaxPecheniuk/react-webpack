@@ -14,7 +14,8 @@ const options = {
 	// Enable webpack's Hot Module Replacement feature
 	// hot: true,
 	// full-screen overlay in the browser for compiler errors or warnings
-	port: 3000,
+	//TODO: port http, https
+	port: 8080,
 	host: "localhost",
 	overlay: {
 		warnings: false,

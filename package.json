@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --config config/webpack-prod-config.js",
     "start": "node config/webpack-dev-server.js",
+    "start:server": "nodemon server/index.js",
     "flow": "flow status --quiet"
   },
   "author": "",
@@ -33,6 +34,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
+    "hapi": "^18.1.0",
+    "nodemon": "^1.18.10",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^6.0.1",

@@ -7,12 +7,7 @@ const path = require("path");
 const paths = require("./paths");
 
 module.exports = {
-	plugins: [
-		new HtmlWebpackPlugin({
-			inject: true,
-			template: paths.appHtml
-		})
-	],
+
 	resolve: {
 		// File extensions. Add others and needed (e.g. scss, json)
 		extensions: [".js", ".jsx"],
@@ -20,9 +15,10 @@ module.exports = {
 		// Aliases help with shortening relative paths
 		// 'Components/button' === '../../../components/button'
 		alias: {
-			Components: path.resolve(paths.appSrc, "components"),
-			Containers: path.resolve(paths.appSrc, "containers"),
-			Utils: path.resolve(paths.appSrc, "utils")
+			//
+			// Components: path.resolve(paths.appSrc, "components"),
+			// Containers: path.resolve(paths.appSrc, "containers"),
+			// Utils: path.resolve(paths.appSrc, "utils")
 		}
 	},
 	module: {
@@ -32,5 +28,11 @@ module.exports = {
 				use: ["file-loader"]
 			}
 		]
-	}
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			inject: true,
+			template: paths.appHtml
+		})
+	],
 };
